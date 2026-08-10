@@ -1,0 +1,19 @@
+{
+    "class_names": [
+        "Dog",
+        "Horse",
+        "Elephant",
+        "Butterfly",
+        "Chicken",
+        "Cat",
+        "Cow",
+        "Sheep",
+        "Spider",
+        "Squirrel"
+    ],
+    "image_size": [
+        224,
+        224
+    ],
+    "num_classes": 10
+}

@@ -1,0 +1,1239 @@
+/* ==========================================================
+   AnimalVision AI - FINAL CSS
+   PART 1 : Global Theme
+========================================================== */
+
+/* ---------- Root Colors ---------- */
+
+:root{
+
+    --bg:#020617;
+    --bg2:#0F172A;
+    --card:#111827;
+    --card2:#1E293B;
+
+    --primary:#2563EB;
+    --cyan:#38BDF8;
+    --purple:#8B5CF6;
+    --green:#22C55E;
+
+    --white:#F8FAFC;
+    --text:#CBD5E1;
+
+}
+
+/* ---------- Background ---------- */
+
+html,
+body,
+.stApp,
+[data-testid="stAppViewContainer"]{
+
+    background:
+    radial-gradient(circle at top left,
+    #1E3A8A 0%,
+    #0F172A 45%,
+    #020617 100%);
+
+    color:var(--white);
+
+    font-family:"Segoe UI",sans-serif;
+
+}
+
+/* ---------- Remove Streamlit ---------- */
+
+#MainMenu{
+    visibility:hidden;
+}
+
+header{
+    visibility:hidden;
+}
+
+footer{
+    visibility:hidden;
+}
+
+/* ---------- Main Container ---------- */
+
+.block-container{
+
+    max-width:1400px;
+
+    padding-top:1rem;
+    padding-left:3rem;
+    padding-right:3rem;
+    padding-bottom:2rem;
+
+}
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero-container{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.title{
+
+    font-size:68px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #38BDF8,
+    #60A5FA,
+    #A78BFA
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    margin-bottom:10px;
+
+}
+
+.subtitle{
+
+    font-size:22px;
+
+    color:var(--text);
+
+}
+
+/* ==========================================================
+   SIDEBAR
+========================================================== */
+
+section[data-testid="stSidebar"]{
+
+    background:
+    linear-gradient(
+    180deg,
+    #020617,
+    #0F172A);
+
+    border-right:1px solid rgba(255,255,255,.08);
+
+}
+
+section[data-testid="stSidebar"] *{
+
+    color:white !important;
+
+    font-size:17px !important;
+
+}
+
+/* ==========================================================
+   FILE UPLOADER
+========================================================== */
+
+[data-testid="stFileUploader"]{
+
+background:
+linear-gradient(
+180deg,
+#111827,
+#1E293B);
+
+border:2px dashed #3B82F6;
+
+border-radius:22px;
+
+padding:28px;
+
+transition:.35s;
+}
+
+[data-testid="stFileUploader"]:hover{
+
+    border-color:#38BDF8;
+
+    box-shadow:
+    0 0 25px rgba(56,189,248,.25);
+
+}
+
+/* ==========================================================
+   TEXT INPUT
+========================================================== */
+
+.stTextInput input{
+
+    background:#111827;
+
+    color:white;
+
+    border-radius:14px;
+
+    border:1px solid #334155;
+
+    font-size:18px;
+
+}
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+.stButton>button{
+
+    width:100%;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #2563EB,
+    #3B82F6);
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.stButton>button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 0 22px rgba(59,130,246,.35);
+
+}
+
+/* ==========================================================
+   LABELS
+========================================================== */
+
+label{
+
+    color:white !important;
+
+    font-size:17px;
+
+}
+
+small{
+
+    color:#CBD5E1 !important;
+
+}
+
+p{
+
+    color:#CBD5E1;
+
+    font-size:17px;
+
+}
+
+/* ==========================================================
+   RADIO
+========================================================== */
+
+[data-testid="stRadio"]>label{
+
+    color:#38BDF8 !important;
+
+    font-size:20px !important;
+
+    font-weight:700 !important;
+
+}
+
+div[role="radiogroup"] label p{
+
+    color:white !important;
+
+    font-size:18px !important;
+
+    font-weight:700 !important;
+
+}
+
+/* ==========================================================
+   AnimalVision AI - FINAL CSS
+   PART 2 : Prediction Section
+==========================================================*/
+
+/* ==========================================
+   Uploaded Image
+========================================== */
+
+[data-testid="stImage"]{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:10px;
+
+}
+
+[data-testid="stImage"] img{
+
+    width:100% !important;
+
+    max-width:380px !important;
+
+    height:auto !important;
+
+    display:block;
+
+    margin:auto;
+
+    border-radius:22px;
+
+    box-shadow:
+        0 0 30px rgba(59,130,246,.30);
+
+}
+
+/* ==========================================
+   Prediction Card
+========================================== */
+
+.prediction-card{
+
+    background:
+    linear-gradient(
+    180deg,
+    #111827,
+    #1E293B);
+
+    border-radius:24px;
+
+    padding:35px;
+
+    min-height:360px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0px 0px 30px rgba(59,130,246,.20);
+
+    transition:.35s;
+
+}
+
+.prediction-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0px 0px 40px rgba(59,130,246,.35);
+
+}
+
+
+.prediction-card{
+
+    text-align:center;
+
+}
+
+.prediction-card .prediction-title{
+
+    font-size:38px;
+
+    font-weight:800;
+
+    color:white;
+
+    margin-top:18px;
+
+}
+
+.prediction-card .prediction-subtitle{
+
+    color:#CBD5E1;
+
+    font-size:20px;
+
+    margin-top:6px;
+
+}
+/* ==========================================
+   Animal Icon
+========================================== */
+
+.prediction-card h1{
+
+    font-size:120px !important;
+
+    margin-bottom:10px;
+
+    line-height:1;
+
+}
+
+/* ==========================================
+   Animal Name
+========================================== */
+
+.prediction-card h2{
+
+    font-size:40px;
+
+    font-weight:800;
+
+    color:#F8FAFC;
+
+    margin-bottom:8px;
+
+}
+
+/* ==========================================
+   Subtitle
+========================================== */
+
+.prediction-card p{
+
+    font-size:18px;
+
+    color:#CBD5E1;
+
+    margin-bottom:18px;
+
+}
+
+/* ==========================================
+   Confidence Heading
+========================================== */
+
+h3{
+
+    color:#38BDF8;
+
+    font-weight:700;
+
+}
+
+/* ==========================================
+   Confidence Percentage
+========================================== */
+
+.confidence-score{
+
+    font-size:42px;
+
+    font-weight:900;
+
+    color:#22C55E;
+
+    text-align:center;
+
+    margin-top:10px;
+
+}
+
+/* ==========================================
+   Progress Bar
+========================================== */
+
+.stProgress{
+
+    margin-top:12px;
+
+    margin-bottom:18px;
+
+}
+
+.stProgress > div{
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+}
+
+.stProgress > div > div{
+
+    background:
+    linear-gradient(
+    90deg,
+    #22C55E,
+    #4ADE80,
+    #86EFAC);
+
+}
+
+/* ==========================================
+   Prediction Status Messages
+========================================== */
+
+.stSuccess{
+
+    border-radius:14px;
+
+}
+
+.stInfo{
+
+    border-radius:14px;
+
+}
+
+.stWarning{
+
+    border-radius:14px;
+
+}
+
+/* ==========================================================
+   AnimalVision AI - FINAL CSS
+   PART 3 : Animal Information Cards
+==========================================================*/
+
+/* ==========================================
+   Section Heading
+========================================== */
+
+.animal-info-title{
+
+    text-align:center;
+
+    font-size:42px;
+
+    font-weight:800;
+
+    color:#F8FAFC;
+
+    margin-top:35px;
+
+    margin-bottom:25px;
+
+}
+
+/* ==========================================
+   Information Card
+========================================== */
+
+.info-card{
+
+    background:
+    linear-gradient(
+    180deg,
+    #1E293B,
+    #111827);
+
+    border-radius:22px;
+
+    padding:25px;
+
+    min-height:180px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0px 0px 20px rgba(0,0,0,.30);
+
+    transition:.35s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+/* Hover Effect */
+
+.info-card:hover{
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0px 0px 28px rgba(56,189,248,.28);
+
+}
+
+/* ==========================================
+   Card Heading
+========================================== */
+
+.info-card h3{
+
+    color:#38BDF8;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+}
+
+/* ==========================================
+   Main Value
+========================================== */
+
+.info-card h2{
+
+    color:#F8FAFC;
+
+    font-size:28px;
+
+    font-weight:800;
+
+    line-height:1.4;
+
+}
+
+/* ==========================================
+   Scientific Name
+========================================== */
+
+.info-card h4{
+
+    color:#CBD5E1;
+
+    font-size:22px;
+
+    font-style:italic;
+
+    line-height:1.5;
+
+}
+
+/* ==========================================
+   Paragraph Text
+========================================== */
+
+.info-card p{
+
+    color:#CBD5E1;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================
+   Interesting Fact Card
+========================================== */
+
+.fact-card{
+
+    margin-top:28px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #2563EB,
+    #1D4ED8);
+
+    border-radius:24px;
+
+    padding:30px;
+
+    border:none;
+
+    color:white;
+
+    box-shadow:
+        0px 0px 35px rgba(37,99,235,.35);
+
+    transition:.35s;
+
+}
+
+.fact-card:hover{
+
+    transform:
+        scale(1.01);
+
+}
+
+/* Fact Heading */
+
+.fact-card h2{
+
+    color:white;
+
+    font-size:30px;
+
+    font-weight:800;
+
+    margin-bottom:15px;
+
+}
+
+/* Fact Text */
+
+.fact-card p{
+
+    color:white;
+
+    font-size:19px;
+
+    line-height:2;
+
+}
+
+/* ==========================================
+   Equal Height Cards
+========================================== */
+
+div[data-testid="column"] .info-card{
+
+    height:100%;
+
+}
+
+/* ==========================================================
+   AnimalVision AI - FINAL CSS
+   PART 4 : AI Assistant
+==========================================================*/
+
+/* ==========================================
+   AI Assistant Section
+========================================== */
+
+.ai-section{
+
+    margin-top:40px;
+
+    background:
+    linear-gradient(
+    180deg,
+    #111827,
+    #1E293B);
+
+    border-radius:24px;
+
+    padding:35px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0px 0px 25px rgba(59,130,246,.18);
+
+}
+
+/* ==========================================
+   AI Heading
+========================================== */
+
+.ai-section h2{
+
+    text-align:center;
+
+    color:#38BDF8;
+
+    font-size:34px;
+
+    font-weight:800;
+
+    margin-bottom:10px;
+
+}
+
+.ai-section p{
+
+    text-align:center;
+
+    color:#CBD5E1;
+
+    font-size:18px;
+
+    margin-bottom:25px;
+
+}
+
+/* ==========================================
+   Radio Buttons
+========================================== */
+
+div[role="radiogroup"]{
+
+    background:#0F172A;
+
+    border-radius:18px;
+
+    padding:12px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+div[role="radiogroup"] label{
+
+    padding:10px 16px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+div[role="radiogroup"] label:hover{
+
+    background:rgba(59,130,246,.18);
+
+}
+
+/* ==========================================
+   Text Input
+========================================== */
+
+.stTextInput input{
+
+    background:#0F172A;
+
+    color:white;
+
+    border:1px solid #334155;
+
+    border-radius:14px;
+
+    font-size:18px;
+
+}
+
+/* ==========================================
+   AI Response Card
+========================================== */
+
+.ai-response{
+
+    margin-top:25px;
+
+    background:
+    linear-gradient(
+    180deg,
+    #111827,
+    #0F172A);
+
+    border-left:6px solid #22C55E;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    box-shadow:
+        0px 0px 25px rgba(34,197,94,.15);
+
+    animation:fadeIn .4s ease;
+
+}
+
+/* AI Heading */
+
+.ai-response h3{
+
+    color:#22C55E;
+
+    font-size:26px;
+
+    font-weight:800;
+
+    margin-bottom:18px;
+
+}
+
+/* AI Answer */
+
+.ai-response p{
+
+    color:#F8FAFC;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    white-space:pre-wrap;
+
+}
+
+/* ==========================================
+   Voice Status
+========================================== */
+
+.stInfo{
+
+    border-radius:15px;
+
+}
+
+.stSuccess{
+
+    border-radius:15px;
+
+}
+
+.stWarning{
+
+    border-radius:15px;
+
+}
+
+/* ==========================================
+   Fade Animation
+========================================== */
+
+@keyframes fadeIn{
+
+from{
+
+    opacity:0;
+
+    transform:translateY(15px);
+
+}
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0px);
+
+}
+
+}
+
+/* ==========================================
+   Footer
+========================================== */
+
+.footer{
+
+    margin-top:50px;
+
+    text-align:center;
+
+    color:#94A3B8;
+
+    font-size:16px;
+
+}
+
+.footer strong{
+
+    color:#38BDF8;
+
+}
+
+/* ==========================================================
+   AnimalVision AI - FINAL CSS
+   PART 5 : Final Polish
+==========================================================*/
+
+/* ==========================================
+   Responsive Design
+========================================== */
+
+@media (max-width:1200px){
+
+    .block-container{
+        padding-left:2rem;
+        padding-right:2rem;
+    }
+
+}
+
+@media (max-width:900px){
+
+    .title{
+        font-size:48px;
+    }
+
+    .subtitle{
+        font-size:18px;
+    }
+
+    .prediction-card{
+        min-height:auto;
+        padding:25px;
+    }
+
+    .prediction-card{
+
+        min-height:520px;
+    }
+    .prediction-card h2{
+        font-size:30px;
+    }
+
+    .confidence-score{
+        font-size:30px;
+    }
+
+    .info-card{
+        min-height:auto;
+    }
+
+    .fact-card{
+        padding:22px;
+    }
+
+    .ai-section{
+        padding:25px;
+    }
+
+}
+
+@media (max-width:600px){
+
+    .block-container{
+        padding-left:1rem;
+        padding-right:1rem;
+    }
+
+    .title{
+        font-size:36px;
+    }
+
+    .subtitle{
+        font-size:16px;
+    }
+
+}
+
+/* ==========================================
+   Divider
+========================================== */
+
+hr{
+
+    border:none;
+
+    height:1px;
+
+    background:rgba(255,255,255,.08);
+
+    margin-top:30px;
+
+    margin-bottom:30px;
+
+}
+
+/* ==========================================
+   Scrollbar
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#3B82F6;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#020617;
+
+}
+
+/* ==========================================
+   Image Animation
+========================================== */
+
+[data-testid="stImage"] img{
+
+    transition:.35s;
+
+}
+
+[data-testid="stImage"] img:hover{
+
+    transform:scale(1.02);
+
+}
+
+/* ==========================================
+   Button Animation
+========================================== */
+
+.stButton>button{
+
+    transition:.3s ease;
+
+}
+
+.stButton>button:active{
+
+    transform:scale(.98);
+
+}
+
+/* ==========================================
+   Card Animation
+========================================== */
+
+.prediction-card,
+.info-card,
+.fact-card,
+.ai-response{
+
+    animation:fadeUp .5s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(18px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   Footer
+========================================== */
+
+.footer{
+
+    margin-top:60px;
+
+    text-align:center;
+
+    color:#94A3B8;
+
+    font-size:16px;
+
+    padding-bottom:20px;
+
+}
+
+.footer strong{
+
+    color:#38BDF8;
+
+}
+
+/* ==========================================
+   Improve Streamlit Metrics & Markdown
+========================================== */
+
+h1,h2,h3,h4{
+
+    font-family:"Segoe UI",sans-serif;
+
+}
+
+p{
+
+    line-height:1.7;
+
+}
+
+
+/* ==========================================
+   Large AI Prediction Image
+==========================================*/
+
+
+
+
+.prediction-animal{
+
+    width:320px;
+
+    height:auto;
+
+    display:block;
+
+    margin:auto;
+
+    margin-bottom:18px;
+
+    filter:drop-shadow(0px 0px 20px rgba(59,130,246,.45));
+
+}
+
+/* Prediction Container */
+
+div[data-testid="stVerticalBlockBorderWrapper"]{
+
+    background:linear-gradient(
+        180deg,
+        #111827,
+        #1E293B
+    );
+
+    border-radius:24px;
+
+    padding:20px;
+
+    box-shadow:0 0 28px rgba(59,130,246,.25);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+/* Prediction Image */
+
+[data-testid="stImage"] img{
+
+    display:block;
+
+    margin:auto;
+
+    max-width:340px !important;
+
+    width:100% !important;
+
+    height:auto !important;
+
+    filter:drop-shadow(
+        0 0 18px rgba(59,130,246,.35)
+    );
+
+}
+/* ==========================================
+   End of AnimalVision Final Theme
+========================================================== */
