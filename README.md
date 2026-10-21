@@ -67,3 +67,10 @@ The project uses an **EfficientNet-based deep learning model** trained for anima
 
 ```text
 models/AnimalSpeciesAI_Final.keras
+
+
+## 🚀 Live Demo
+
+**Try AnimalVision AI:** [Open Live App](https://animalvision-ai.streamlit.app/)
+
+Classify animal images and explore animal information with the AI assistant and voice playback.
