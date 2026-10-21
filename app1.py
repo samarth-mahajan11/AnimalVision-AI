@@ -50,24 +50,49 @@ st.set_page_config(
 # ==========================================================
 
 def speak_text(text):
-    """Speak text when the local environment supports audio."""
+    """Display browser-based speech controls for the AI response."""
 
-    if pyttsx3 is None:
-        st.info("Text-to-speech is unavailable in this deployment.")
-        return
+    import json
 
-    try:
-        engine = pyttsx3.init()
-        engine.setProperty("rate", 170)
-        engine.setProperty("volume", 1.0)
-        engine.say(text)
-        engine.runAndWait()
-        engine.stop()
-    except Exception:
-        st.info(
-            "Audio playback is unavailable in this environment. "
-            "You can still read the AI response on screen."
-        )
+    speech_text = json.dumps(str(text))
+
+    components_html = f"""
+    <button id="speak" style="
+        background:#2563eb;color:white;border:0;
+        border-radius:8px;padding:10px 16px;cursor:pointer;">
+        🔊 Speak AI Response
+    </button>
+    <button id="stop" style="
+        background:#475569;color:white;border:0;
+        border-radius:8px;padding:10px 16px;cursor:pointer;">
+        ⏹ Stop
+    </button>
+
+    <script>
+    const speechText = {speech_text};
+
+    document.getElementById("speak").onclick = () => {{
+        if (!window.speechSynthesis) {{
+            alert("Speech playback is not supported by this browser.");
+            return;
+        }}
+
+        window.speechSynthesis.cancel();
+
+        const utterance = new SpeechSynthesisUtterance(speechText);
+        utterance.lang = "en-US";
+        utterance.rate = 1;
+        window.speechSynthesis.speak(utterance);
+    }};
+
+    document.getElementById("stop").onclick = () => {{
+        window.speechSynthesis.cancel();
+    }};
+    </script>
+    """
+
+    st.components.v1.html(components_html, height=60)
+
 
 
 # ==========================================================
