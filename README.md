@@ -62,12 +62,9 @@ The application supports:
 ## 🧠 AI Model
 
 The project uses an **EfficientNet-based deep learning model** trained for animal species classification.
-
-### Model File
-
 ```text
 models/AnimalSpeciesAI_Final.keras
-
+```
 
 ## 🚀 Live Demo
 
